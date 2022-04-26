@@ -8,6 +8,22 @@ class Phone {
     getModel() {
         return this.model;
     }
+
+    getNewPrice() {
+        return this.newPrice;
+    }
+
+    getUsedGoodPrice() {
+        return this.usedGoodPrice;
+    }
+
+    getScratchFee() {
+        return this.scratchFee;
+    }
+
+    getCrackedScreenFee() {
+        return this.crackedScreenFee;
+    }
 }
 
 const phonePriceData = [
@@ -49,4 +65,6 @@ $(document).ready(function() {
         $("#model-selection").append(`<option value="${newPhone}">${newPhone.getModel()}</option>`);
     });
 });
+
+
 
