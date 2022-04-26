@@ -1,3 +1,15 @@
+class Phone {
+    constructor(json)
+    {
+        Object.assign(this,json);
+        console.log(this);
+    }
+
+    getModel() {
+        return this.model;
+    }
+}
+
 const phonePriceData = [
     {
         "model":"iPhone 6 Plus",
@@ -28,3 +40,13 @@ const phonePriceData = [
         "crackedScreenFee":"30"
     }
 ];
+
+$(document).ready(function() {
+    phonePriceData.forEach(phoneJSON => {
+        let newPhone = new Phone(phoneJSON);
+        console.log(newPhone + "\nObject Created");
+        console.log(newPhone.getModel())
+        $("#model-selection").append(`<option value="${newPhone}">${newPhone.getModel()}</option>`);
+    });
+});
+
