@@ -1,30 +1,3 @@
-class Phone {
-  constructor(json) {
-    Object.assign(this, json);
-    console.log(this);
-  }
-
-  getModel() {
-    return this.model;
-  }
-
-  getNewPrice() {
-    return this.newPrice;
-  }
-
-  getUsedGoodPrice() {
-    return this.usedGoodPrice;
-  }
-
-  getScratchFee() {
-    return this.scratchFee;
-  }
-
-  getCrackedScreenFee() {
-    return this.crackedScreenFee;
-  }
-}
-
 const phonePriceData = [
   {
     model: "iPhone 6 Plus",
@@ -56,23 +29,10 @@ const phonePriceData = [
   },
 ];
 
-//order is
-/* [0:new with box, 
-    1:used-good, 
-    2:scratches, 
-    3:cracked back, 
-    4:cracked screen, 
-    5:icloud locked, 
-    6:black screen] */
-let conditionData = [];
-
 $(document).ready(function () {
-  phonePriceData.forEach((phoneJSON) => {
-    let newPhone = new Phone(phoneJSON);
-    console.log(newPhone + "\nObject Created");
-    console.log(newPhone.getModel());
+  phonePriceData.forEach((phoneJSON,index) => {
     $("#model-selection").append(
-      `<option value="${newPhone}">${newPhone.getModel()}</option>`
+      `<option value="${index}">${phoneJSON.model}</option>`
     );
   });
 });
@@ -80,9 +40,9 @@ $(document).ready(function () {
 //calculates price
 function calculatePrice() {
   if ($("#new-check").val()) {
-    return $("#model-selection").find(":selected").val().getNewPrice();
+    return phonePriceData[$("#model-selection").find(":selected").val()].newPrice;
   } else if ($("#used-good").val()) {
-    return $("#model-selection").val().getUsedGoodPrice();
+    return phonePriceData[$("#model-selection").find(":selected").val()].usedGoodPrice;
   } else {
       let price = $('#model-selection').val().getUsedGoodPrice();
     if ($("#scratches").val()) {
