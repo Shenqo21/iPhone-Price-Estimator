@@ -78,5 +78,6 @@ function calculatePrice() {
 }
 
 function displayPrice() {
+  $('#resultDisplay').text('Estimated Value: '+calculatePrice());
   console.log(calculatePrice());
 }

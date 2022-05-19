@@ -15,17 +15,17 @@
   </head>
 
   <body>
-    <header>
+    <header class="text-center p-2">
       <h1>Cash Value Calculator</h1>
       <h2>Follow the prompts to learn how much money you could make today!</h2>
     </header>
 
-    <div class="d-flex">
+    <div class="d-flex text-center">
       <form class="w-40">
-        <div>
+        <div class="m-2">
           <!-- model dropdown selection -->
-          <label class="h3" for="model-selection">Pick Your Model: </label>
-          <select name="models" id="model-selection">
+          <label class="h3 p-2" for="model-selection">Pick Your Model: </label>
+          <select class="form-select w-50 d-inline p-2" name="models" id="model-selection">
             <option value="">Select a Model</option>
             <!-- script adds options to the dropdown based on the array input given -->
           </select>
@@ -137,6 +137,12 @@
           Submit
         </button>
       </form>
+    </div>
+    <div>
+      <container class="p-2">
+        <h2 id="resultDisplay">Estimated Value: </h2>
+        <p>The prices displayed are to give you an estimate, the actual value may vary more or less depending on other conditions. Message Shen Steele with your phone model and details for an official offer</p>
+      </container>
     </div>
     <footer></footer>
   </body>
