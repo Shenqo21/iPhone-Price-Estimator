@@ -37,6 +37,8 @@ $(document).ready(function () {
   });
 });
 
+var meetInLawrence = false;
+
 //calculates price
 function calculatePrice() {
   if ($("#new-check").is(':checked')) {
@@ -73,6 +75,10 @@ function calculatePrice() {
     if ($("#black-screen").is(':checked')) {
       return "Contact/Explanation";
     }
+    if(meetInLawrence)
+    {
+      price = parseInt(price) + 15;
+    }
     return price;
   }
 }
@@ -80,4 +86,24 @@ function calculatePrice() {
 function displayPrice() {
   $('#resultDisplay').text('Estimated Value: '+calculatePrice());
   console.log(calculatePrice());
+}
+
+
+
+function canMeet() {
+  meetInLawrence = true;
+  $('#canMeetBtn').removeClass('btn-secondary');
+  $('#canMeetBtn').addClass('btn-success');
+  $('#cantMeetBtn').removeClass('btn-danger');
+  $('#cantMeetBtn').addClass('btn-secondary');
+  displayPrice();
+}
+
+function cantMeet() {
+  meetInLawrence = false;
+  $('#canMeetBtn').addClass('btn-secondary');
+  $('#canMeetBtn').removeClass('btn-success');
+  $('#cantMeetBtn').addClass('btn-danger');
+  $('#cantMeetBtn').removeClass('btn-secondary');
+  displayPrice();
 }

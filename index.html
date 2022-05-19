@@ -20,130 +20,166 @@
       <h2>Follow the prompts to learn how much money you could make today!</h2>
     </header>
 
-    <div class="d-flex text-center">
-      <form class="w-40">
-        <div class="m-2">
-          <!-- model dropdown selection -->
-          <label class="h3 p-2" for="model-selection">Pick Your Model: </label>
-          <select class="form-select w-50 d-inline p-2" name="models" id="model-selection">
-            <option value="">Select a Model</option>
-            <!-- script adds options to the dropdown based on the array input given -->
-          </select>
-        </div>
-
-        <!-- Condition fieldset -->
-        <fieldset class="row mb-3 card w-100 border-2">
-          <legend class="col-form-label fw-bold">
-            What condition is it in? Select all that apply:
-          </legend>
-
-          <!-- Checkboxes container -->
-          <div class="">
-            <!-- the actual checkbox -->
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="new-check"
-                name="new-check"
-                value="new with box"
-              />
-              <!-- the label for the checkbox -->
-              <label class="form-check-label" for="new-check"
-                >New With Box</label
-              ><br />
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="used-good"
-                name="used-good"
-                value="used good"
-              />
-              <label class="form-check-label" for="used-good"
-                >Used - Good (Only applicable if none of the below apply)</label
-              ><br />
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="scratches"
-                name="scratches"
-                value="scratches"
-              />
-              <label class="form-check-label" for="scratches"
-                >Major Scratch(es)</label
-              ><br />
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="cracked-back"
-                name="cracked-back"
-                value="cracked back"
-              />
-              <label class="form-check-label" for="cracked-back"
-                >Cracked Back</label
-              ><br />
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="cracked-screen"
-                name="cracked-screen"
-                value="cracked screen"
-              />
-              <label class="form-check-label" for="cracked-screen"
-                >Cracked Screen (Still Usable)</label
-              ><br />
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="icloud-locked"
-                name="icloud-locked"
-                value="icloud locked"
-              />
-              <label class="form-check-label" for="icloud-locked"
-                >iCloud Locked</label
-              ><br />
-            </div>
-
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="black-screen"
-                name="black-screen"
-                value="black screen"
-              />
-              <label class="form-check-label" for="black-screen"
-                >Phone Turns on but Screen Stays Black</label
-              ><br />
-            </div>
+    <!--Contains body elements-->
+    <container class="d-flex justify-content-evenly">
+      <div class="d-flex text-center justify-content-evenly">
+        <form class="w-75">
+          <div class="m-2">
+            <!-- model dropdown selection -->
+            <label class="h3 p-2" for="model-selection"
+              >Pick Your Model:
+            </label>
+            <select
+              class="form-select w-50 d-inline p-2"
+              name="models"
+              id="model-selection"
+            >
+              <option value="">Select a Model</option>
+              <!-- script adds options to the dropdown based on the array input given -->
+            </select>
           </div>
-        </fieldset>
-        <button type="button" id="submit-btn" onclick="displayPrice()" class="btn btn-primary">
-          Submit
-        </button>
-      </form>
-    </div>
+
+          <!-- Condition fieldset -->
+          <fieldset class="row mb-3 card mw-50 border-2">
+            <legend class="col-form-label fw-bold">
+              What condition is it in? Select all that apply:
+            </legend>
+
+            <!-- Checkboxes container -->
+            <div class="">
+              <!-- the actual checkbox -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="new-check"
+                  name="new-check"
+                  value="new with box"
+                />
+                <!-- the label for the checkbox -->
+                <label class="form-check-label" for="new-check"
+                  >New With Box</label
+                ><br />
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="used-good"
+                  name="used-good"
+                  value="used good"
+                />
+                <label class="form-check-label" for="used-good"
+                  >Used - Good (Only applicable if none of the below
+                  apply)</label
+                ><br />
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="scratches"
+                  name="scratches"
+                  value="scratches"
+                />
+                <label class="form-check-label" for="scratches"
+                  >Major Scratch(es)</label
+                ><br />
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="cracked-back"
+                  name="cracked-back"
+                  value="cracked back"
+                />
+                <label class="form-check-label" for="cracked-back"
+                  >Cracked Back</label
+                ><br />
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="cracked-screen"
+                  name="cracked-screen"
+                  value="cracked screen"
+                />
+                <label class="form-check-label" for="cracked-screen"
+                  >Cracked Screen (Still Usable)</label
+                ><br />
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="icloud-locked"
+                  name="icloud-locked"
+                  value="icloud locked"
+                />
+                <label class="form-check-label" for="icloud-locked"
+                  >iCloud Locked</label
+                ><br />
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="black-screen"
+                  name="black-screen"
+                  value="black screen"
+                />
+                <label class="form-check-label" for="black-screen"
+                  >Phone Turns on but Screen Stays Black</label
+                ><br />
+              </div>
+            </div>
+          </fieldset>
+          <button
+            type="button"
+            id="submit-btn"
+            onclick="displayPrice()"
+            class="btn btn-primary"
+          >
+            Submit
+          </button>
+          <h3 id="resultDisplay" class="w-100 m-3 mt-4">Estimated Value:</h3>
+        </form>
+        
+      </div>
+      <!-- <div class="d-flex align-items-center">
+        <div class="card text-center border border-2 w-75 h-75">
+          Shen Steele
+        </div>
+      </div> -->
+    </container>
+
     <div>
-      <container class="p-2">
-        <h2 id="resultDisplay">Estimated Value: </h2>
-        <p>The prices displayed are to give you an estimate, the actual value may vary more or less depending on other conditions. Message Shen Steele with your phone model and details for an official offer</p>
+      <container class="p-2 m-2 d-flex flex-wrap justify-content-evenly">
+       
+        <h4 class="form-check-label h4 text-center" for="lawrence-check">
+          Automatically Add $15 to your value if you are able to meet me in
+          Lawrence!
+        </h4>
+        <div class="d-flex justify-content-evenly p-2 m-2 w-75 flex-wrap">
+          <button class="btn w-30 btn-secondary" id="canMeetBtn" onClick="canMeet()">Yes, I can meet in Lawrence!</button>
+          <button class="btn btn-secondary w-30" id="cantMeetBtn" onClick="cantMeet()">No, I can't meet in Lawrence</button>
+        </div>
+        <p class="flex-grow-1 text-center">
+          The prices displayed are to give you an estimate. The actual value may
+          vary more or less depending on other conditions. Message Shen Steele
+          with your phone model and details for an official offer
+        </p>
       </container>
     </div>
+
     <footer></footer>
   </body>
 </html>
