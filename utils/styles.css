@@ -6,3 +6,15 @@ body {
 .w-40 {
     width: 40%
 }
+
+/*Media Query for Tablets and Smaller*/
+@media screen and (max-width: 855px) {
+    /*Applied to any screen between 768px and 575px*/
+  
+}   
+
+/*Media Query for Mobile Phones and Smaller*/
+@media screen and (max-width: 575px) {
+    /*Applied to any screen smaller than 575px*/
+   
+}

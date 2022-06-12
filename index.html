@@ -18,6 +18,7 @@
     <header class="text-center p-2">
       <h1>Cash Value Calculator</h1>
       <h2>Follow the prompts to learn how much money you could make today!</h2>
+      <h4>Just screenshot your results and message them to Shen Steele! <a href='https://www.facebook.com/shen.steele' target="_blank"><img src='./images/iconmonstr-facebook-messenger-1.svg'/></a></h4>
     </header>
 
     <!--Contains body elements-->
@@ -29,14 +30,15 @@
             <label class="h3 p-2" for="model-selection"
               >Pick Your Model:
             </label>
-            <select
-              class="form-select w-50 d-inline p-2"
-              name="models"
-              id="model-selection"
-            >
-              <option value="">Select a Model</option>
-              <!-- script adds options to the dropdown based on the array input given -->
-            </select>
+              <select
+                class="form-select w-50 d-inline p-2"
+                name="models"
+                id="model-selection"
+                onChange="selectHandler(this.value)"
+              >
+                <option value="">Select a Model</option>
+                <!-- script adds options to the dropdown based on the array input given -->
+              </select>
           </div>
 
           <!-- Condition fieldset -->
@@ -46,7 +48,7 @@
             </legend>
 
             <!-- Checkboxes container -->
-            <div class="">
+            <div class="" id="checkboxes">
               <!-- the actual checkbox -->
               <div class="form-check">
                 <input
