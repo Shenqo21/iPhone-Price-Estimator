@@ -1,6 +1,6 @@
-var contactStatement = 'contact statement';
-var crackedBackStatement = 'cracked back statement';
-var dontBuyStatement = 'dont buy statement';
+var contactStatement = "contact statement";
+var crackedBackStatement = "cracked back statement";
+var dontBuyStatement = "dont buy statement";
 
 //all price calculations are done based on usedGoodPrice
 //therefore EVERY PHONE MUST HAVE A USED GOOD PRICE
