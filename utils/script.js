@@ -1,6 +1,6 @@
-var contactStatement = "contact statement";
-var crackedBackStatement = "cracked back statement";
-var dontBuyStatement = "dont buy statement";
+var contactStatement = "I want to buy your phone!! But I don’t have enough info about it. Please message me with you phone model!";
+var crackedBackStatement = "If your phone has a cracked back, prices vary depending on the severity of the damage. Please message me for your fast cash offer!";
+var dontBuyStatement = "I want to buy your phone!! But I don’t have enough info about it. Please message me with you phone model!";
 
 //all price calculations are done based on usedGoodPrice
 //therefore EVERY PHONE MUST HAVE A USED GOOD PRICE
